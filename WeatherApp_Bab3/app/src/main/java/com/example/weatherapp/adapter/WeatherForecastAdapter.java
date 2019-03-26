@@ -14,9 +14,8 @@ import com.example.weatherapp.common.Common;
 import com.example.weatherapp.model.WeatherForecastResult;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecastAdapter.MyViewHolder> {
+
 
     Context context;
     WeatherForecastResult weatherForecastResult;
@@ -50,6 +49,7 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
     public int getItemCount() {
         return weatherForecastResult.list.size();
     }
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView txt_date_time, txt_description, txt_temperature;
