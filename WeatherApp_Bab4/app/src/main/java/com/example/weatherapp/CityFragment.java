@@ -106,6 +106,7 @@ public class CityFragment extends Fragment {
         return itemView;
     }
 
+
     private class LoadCities extends SimpleAsyncTask<List<String>> {
         @Override
         protected List<String> doInBackgroundSimple() {
@@ -157,6 +158,7 @@ public class CityFragment extends Fragment {
 
                 }
             });
+
             searchBar.setOnSearchActionListener(new MaterialSearchBar.OnSearchActionListener() {
                 @Override
                 public void onSearchStateChanged(boolean enabled) {
@@ -175,8 +177,10 @@ public class CityFragment extends Fragment {
                 }
             });
 
+            // Mengeset suggestion
             searchBar.setLastSuggestions(strings);
 
+            // Mengeset komponen yang ditampilkan
             loading.setVisibility(View.GONE);
             weather_panel.setVisibility(View.VISIBLE);
         }
@@ -243,4 +247,6 @@ public class CityFragment extends Fragment {
         compositeDisposable.clear();
         super.onStop();
     }
+
+
 }
